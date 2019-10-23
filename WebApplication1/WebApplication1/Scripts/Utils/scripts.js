@@ -2,15 +2,12 @@
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
 
-$(document).ready(
-    function () {
+$(document).ready(function () {
 
-
+    $('#limpar').click(function () {
+        ClearScreen();
     });
 
-
-$('#limpar').click(function () {
-    ClearScreen();
 });
 
 
