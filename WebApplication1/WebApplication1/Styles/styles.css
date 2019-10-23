@@ -1,7 +1,14 @@
 ﻿
 body {
     height: 100vh;
-    background-image: url('https://freedesignfile.com/upload/2018/12/World-Map--vector-19883.jpg');
+    background-image: radial-gradient(circle, #ffe000, #ffe543, #ffea66, #ffef84, #fff3a0);
+    /*background-image: url('https://freedesignfile.com/upload/2018/12/World-Map--vector-19883.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
+}
+#titulo{
+    align-content: center;
+    display:flex;
+    justify-content:center;
+    color: darkgrey;
 }

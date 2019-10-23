@@ -7,27 +7,20 @@
     <title>Consulta Correios</title>
 </head>
 <body>
-    <h1>Correios</h1>
-    <button class="btn btn-sm" id="teste">Calcular Frete</button>
 
     <div class="container-fluid h-100">
         <div class="row d-flex align-content-center justify-content-center h-100">
-            <div class="col-md-3">
+            <div class="col-md-8">
 
+                <h1 id="titulo">Calculadora Correios</h1>
 
                 <div class="row">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">CEP ORIGEM</span>
+                            <span class="input-group-text">CEP Origem</span>
                         </div>
                         <input type="text" autofocus id="ceporigem" class="form-control form-group" name="CepOrigem" />
-                    </div>
-                </div>
 
-
-
-                <div class="row">
-                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">CEP Destino</span>
                         </div>
@@ -37,40 +30,76 @@
 
 
 
+                <!--<div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">CEP Destino</span>
+            </div>
+            <input type="text" autofocus id="cepdestino" class="form-control form-group" name="CepDestino" />
+        </div>
+    </div>-->
+
+
+
                 <div class="row">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Peso</span>
+                            <span class="input-group-text">Peso estimado (Kg)</span>
                         </div>
                         <input type="text" id="peso" autofocus class="form-control form-group" name="peso" />
-                    </div>
-                </div>
 
-
-
-                <div class="row">
-                    <div class="input-group mb-5">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Tipo Serviço</span>
                             <select id="selectservico" class="w-100">
-                                <option class="form-control form-group">--Tipo de serviço--</option>
+                                <option class="form-control form-group" value="04014">SEDEX à vista</option>
+                                <option class="form-control form-group" value="04510">PAC à vista</option>
+                                <option class="form-control form-group" value="40169">SEDEX 12</option>
+                                <option class="form-control form-group" value="40215">SEDEX 10</option>
+                                <option class="form-control form-group" value="40290">SEDEX Hoje</option>
                             </select>
                         </div>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="input-group mb-5">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Formato Encomenda</span>
                             <select id="formatoencomenda" class="w-100">
-                                <option class="form-group">--Formato de Encomenda--</option>
+                                <option class="form-group" value="1">Caixa/pacote </option>
+                                <option class="form-group" value="2">Rolo/prisma </option>
+                                <option class="form-group" value="3">Envelope </option>
                             </select>
                         </div>
                     </div>
                 </div>
+
+
+
+                <!--<div class="row">
+        <div class="input-group mb-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Tipo Serviço</span>
+                <select id="selectservico" class="w-100">
+                    <option class="form-control form-group">SEDEX à vista</option>
+                    <option class="form-control form-group">PAC à vista</option>
+                    <option class="form-control form-group">SEDEX 12</option>
+                    <option class="form-control form-group">SEDEX 10</option>
+                    <option class="form-control form-group">SEDEX Hoje</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="input-group mb-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Formato Encomenda</span>
+                <select id="formatoencomenda" class="w-100">
+                    <option class="form-group">1 – Formato caixa/pacote</option>
+                    <option class="form-group">2 – Formato rolo/prisma</option>
+                    <option class="form-group">3 - Envelope</option>
+                </select>
+            </div>
+        </div>
+    </div>-->
 
 
 
@@ -80,35 +109,14 @@
                             <span class="input-group-text">Comprimento (cm)</span>
                         </div>
                         <input type="text" id="comprimento" autofocus class="form-control form-group" name="comprimento" />
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Largura</span>
+                            <span class="input-group-text">Largura (cm)</span>
                         </div>
-                        <input type="text" id="largura " autofocus class="form-control form-group" name="largura" />
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="input-group mb-3">
+                        <input type="text" id="largura" autofocus class="form-control form-group" name="largura" />
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Altura</span>
+                            <span class="input-group-text">Altura (cm)</span>
                         </div>
                         <input type="text" id="altura" autofocus class="form-control form-group" name="altura" />
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Diâmetro</span>
                         </div>
@@ -117,11 +125,112 @@
                 </div>
 
 
+
+                <!--<div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Largura</span>
+            </div>
+            <input type="text" id="largura" autofocus class="form-control form-group" name="largura" />
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Altura</span>
+            </div>
+            <input type="text" id="altura" autofocus class="form-control form-group" name="altura" />
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Diâmetro</span>
+            </div>
+            <input type="text" id="diametro" autofocus class="form-control form-group" name="diametro" />
+        </div>
+    </div>-->
+
                 <div class="row">
-                    <input type="button" id="consultar" name="consultar" class="btn btn-danger w-50 form-group" value="Consultar" />
-                    <input type="button" id="limpar" name="limpar" class="btn btn-danger w-50 form-group" value="Nova consulta" />
+                    <div class="input-group mb-5">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Entrega Mão Própria</span>
+                            <select id="entregamao" class="w-100">
+                                <option class="form-group" value="s">Sim</option>
+                                <option class="form-group"value="n">Não</option>
+                            </select>
+                        </div>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Valor Declarado</span>
+                        </div>
+                        <input type="text" id="valordeclarado" autofocus class="form-control form-group" name="valordeclarado" />
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Aviso Recebimento</span>
+                            <select id="avisorecebimento" class="w-100">
+                                <option class="form-group" value="s">Sim</option>
+                                <option class="form-group" value="n">Não</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
+                <!--<div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Valor Declarado</span>
+            </div>
+            <input type="text" id="valordeclarado" autofocus class="form-control form-group" name="valordeclarado" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-group mb-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Aviso Recebimento</span>
+                <select id="avisorecebimento" class="w-100">
+                    <option class="form-group">Sim</option>
+                    <option class="form-group">Não</option>
+                </select>
+            </div>
+        </div>
+    </div>-->
+
+
+                <div class="row">
+                    <input type="button" id="consultar" name="consultar" class="btn btn-success w-50 form-group" value="Consultar" />
+                    <input type="button" id="limpar" name="limpar" class="btn btn-warning w-50 form-group" value="Nova consulta" />
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Valor Final</span>
+                        </div>
+                        <input type="text" id="resultadoValor" autofocus class="form-control form-group" name="resultadoValor" />
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Prazo Entrega</span>
+                        </div>
+                        <input type="text" id="resultadoPrazo" autofocus class="form-control form-group" name="resultadoPrazo" />
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Valor sem Adicionais</span>
+                        </div>
+                        <input type="text" id="resultadoSemAdicionais" autofocus class="form-control form-group" name="resultadoSemAdicionais" />
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Em mãos</span>
+                        </div>
+                        <input type="text" id="resultadoEmMaos" autofocus class="form-control form-group" name="resultadoEmMaos" />
+
+                    </div>
+                </div>
 
             </div>
         </div>
