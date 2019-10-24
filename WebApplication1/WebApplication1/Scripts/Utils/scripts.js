@@ -47,7 +47,7 @@ $("#consultar").click(function () {
         $('#resultadoValor').val("R$ " + data.cServico.Valor);
         $('#resultadoPrazo').val(data.cServico.PrazoEntrega + " dia(s)");
         $('#resultadoSemAdicionais').val("R$ " + data.cServico.ValorSemAdicionais);
-        $('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
+        //$('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
 
 
 
