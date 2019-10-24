@@ -1,7 +1,7 @@
 ﻿
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
-
+$('#valordeclarado').mask('#.###,00', { reverse: true });
 $(document).ready(function () {
 
     $('#limpar').click(function () {
