@@ -1,8 +1,8 @@
 ﻿
 body {
     height: 100vh;
-    background-image: radial-gradient(circle, #ffe000, #ffe543, #ffea66, #ffef84, #fff3a0);
-    /*background-image: url('https://freedesignfile.com/upload/2018/12/World-Map--vector-19883.jpg');*/
+    /*background-image: radial-gradient(circle, #ffe000, #ffe543, #ffea66, #ffef84, #fff3a0);*/
+    background-image: url('https://http2.mlstatic.com/painel-lona-festa-300x170mt-colmeia-abelhinha-2-D_NQ_NP_607199-MLB25593458896_052017-F.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -10,7 +10,7 @@ body {
     align-content: center;
     display:flex;
     justify-content:center;
-    color: darkgrey;
+    color: black;
 }
 #camposCep{
     margin-right: 10px;
