@@ -1,0 +1,17 @@
+﻿
+body {
+    height: 100vh;
+    /*background-image: radial-gradient(circle, #ffe000, #ffe543, #ffea66, #ffef84, #fff3a0);*/
+    background-image: url('https://http2.mlstatic.com/painel-lona-festa-300x170mt-colmeia-abelhinha-2-D_NQ_NP_607199-MLB25593458896_052017-F.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titulo{
+    align-content: center;
+    display:flex;
+    justify-content:center;
+    color: black;
+}
+#camposCep{
+    margin-right: 10px;
+}
