@@ -44,7 +44,7 @@ $("#consultar").click(function () {
     $.getJSON(options.uri, options.qs, function (data) {
         //debugger
 
-        $('#resultadoValor').val("R$ " + data.cServico.Valor);
+            $('#resultadoValor').val("R$ " + data.cServico.Valor);
         $('#resultadoPrazo').val(data.cServico.PrazoEntrega + " dia(s)");
         $('#resultadoSemAdicionais').val("R$ " + data.cServico.ValorSemAdicionais);
         //$('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
