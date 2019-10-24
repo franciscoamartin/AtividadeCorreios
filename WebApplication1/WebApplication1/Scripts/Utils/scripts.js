@@ -16,8 +16,6 @@ $(document).ready(function () {
 $("#consultar").click(function () {
 
     var params = {
-        'nCdEmpresa': '',
-        'sDsSenha': '',
         'sCepOrigem': $('#ceporigem').val(),
         'sCepDestino': $('#cepdestino').val(),
         'nVlPeso': $('#peso').val(),
