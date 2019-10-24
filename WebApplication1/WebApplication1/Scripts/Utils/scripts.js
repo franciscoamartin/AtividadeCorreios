@@ -1,7 +1,7 @@
 ﻿
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
-
+$('#valordeclarado').mask('#.###,00', { reverse: true });
 $(document).ready(function () {
 
     $('#limpar').click(function () {
@@ -47,7 +47,7 @@ $("#consultar").click(function () {
         $('#resultadoValor').val("R$ " + data.cServico.Valor);
         $('#resultadoPrazo').val(data.cServico.PrazoEntrega + " dia(s)");
         $('#resultadoSemAdicionais').val("R$ " + data.cServico.ValorSemAdicionais);
-        $('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
+        //$('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
 
 
 
