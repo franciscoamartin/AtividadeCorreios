@@ -68,6 +68,7 @@ $(document).ready(function () {
         //Obtemos o atributo que indica a pagina que vamos enviar o post
         var obterAtributo = $('#formenviar').attr('send-post');
 
+        debugger
 
         //Enviamos o post para nosso servidor web
         $.post("https://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
@@ -78,12 +79,7 @@ $(document).ready(function () {
 
             //Aqui carregamos as informações automaticamente
             $.each(data.cServico, function (key, value) {
-
-                //$('#resultadoValor').val("R$ " + value.cServico.Valor);
-                //$('#resultadoPrazo').val(value.cServico.PrazoEntrega + " dia(s)");
-                //$('#resultadoSemAdicionais').val("R$ " + value.cServico.ValorSemAdicionais);
-
-                $('input[name={key}]'.replace("{key}", key)).value(value);
+                $('input[name="{key}"]'.replace("{key}", key)).val(value);
             });
         });
     });
@@ -93,6 +89,7 @@ $(document).ready(function () {
     });
 
 });
+
 
 function ClearScreen() {
     var myInputs = $('input[type="text"]');
