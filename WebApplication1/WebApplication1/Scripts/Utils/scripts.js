@@ -10,7 +10,7 @@
 //});
 
 
-$("#consultar").click(function () {
+//$("#consultar").click(function () {
 
 //    var params = {
 //        'sCepOrigem': $('#ceporigem').val(),
@@ -59,7 +59,7 @@ $("#consultar").click(function () {
 
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
-$('#valordeclarado').mask('#.###,00', { reverse: true });
+$('#nVlValorDeclarado').mask('#.###,00', { reverse: true });
 
 $(document).ready(function () {
     $('#consultar').click(function () {
@@ -69,18 +69,24 @@ $(document).ready(function () {
         //Obtemos o atributo que indica a pagina que vamos enviar o post
         var obterAtributo = $('#formenviar').attr('send-post');
 
-            $('#resultadoValor').val("R$ " + data.cServico.Valor);
-        $('#resultadoPrazo').val(data.cServico.PrazoEntrega + " dia(s)");
-        $('#resultadoSemAdicionais').val("R$ " + data.cServico.ValorSemAdicionais);
-        //$('#resultadoEmMaos').val(data.cServico.EntregaDomiciliar);
 
+        //Enviamos o post para nosso servidor web
+        $.post("https://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
+            //aqui como recebemos uma string com formato de JSON
+            //temos que passar ela para o JSON parecido com o int.Parse()
+            data = JSON.parse(data);
+            
 
+            //Aqui carregamos as informações automaticamente
+            $.each(data.cServico, function (key, value) {
 
+                //$('#resultadoValor').val("R$ " + value.cServico.Valor);
+                //$('#resultadoPrazo').val(value.cServico.PrazoEntrega + " dia(s)");
+                //$('#resultadoSemAdicionais').val("R$ " + value.cServico.ValorSemAdicionais);
 
-        //alert(" Valor Final" + data.cServico.Valor
-        //    + "\n\rPrazo Entrega " + data.cServico.PrazoEntrega
-        //    + "\n\rValor Sem Adicionais " + data.cServico.ValorSemAdicionais
-        //);
+                $('input[name={key}]'.replace("{key}", key)).val(value);
+            });
+        });
     });
 
     $('#limpar').click(function () {

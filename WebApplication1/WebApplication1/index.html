@@ -18,11 +18,11 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">CEP Origem</span>
                             </div>
-                            <input type="text" autofocus id="ceporigem" class="form-control form-group" name="CepOrigem" />
+                            <input type="text" autofocus id="ceporigem" class="form-control form-group" name="sCepOrigem" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">CEP Destino</span>
                             </div>
-                            <input type="text" autofocus id="cepdestino" class="form-control form-group" name="CepDestino" />
+                            <input type="text" autofocus id="cepdestino" class="form-control form-group" name="sCepDestino" />
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                             <input type="text" id="peso" autofocus class="form-control form-group" placeholder="Até 50kg" name="peso" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Tipo Serviço</span>
-                                <select name="teste" id="selectservico" class="w-100">
+                                <select name="nCdServico" id="selectservico" class="w-100">
                                     <option class="form-control form-group" value="04014">SEDEX à vista</option>
                                     <option class="form-control form-group" value="04510">PAC à vista</option>
                                     <option class="form-control form-group" value="40169">SEDEX 12</option>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Formato Encomenda</span>
-                                <select id="formatoencomenda" class="w-100">
+                                <select name="nCdFormato" id="nCdFormato" class="w-100">
                                     <option class="form-group" value="1">Caixa/pacote </option>
                                     <option class="form-group" value="2">Rolo/prisma </option>
                                     <option class="form-group" value="3">Envelope </option>
@@ -62,19 +62,19 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Comprimento (cm)</span>
                             </div>
-                            <input type="text" id="comprimento" placeholder="Mínimo 16 cm" autofocus class="form-control form-group" name="comprimento" />
+                            <input type="text" id="nVlComprimento" placeholder="Mínimo 16 cm" autofocus class="form-control form-group" name="nVlComprimento" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Largura (cm)</span>
                             </div>
-                            <input type="text" id="largura" placeholder="Mínimo 11 cm" autofocus class="form-control form-group" name="largura" />
+                            <input type="text" id="nVlLargura" placeholder="Mínimo 11 cm" autofocus class="form-control form-group" name="nVlLargura" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Altura (cm)</span>
                             </div>
-                            <input type="text" id="altura" placeholder="Mínimo 2 cm" autofocus class="form-control form-group" name="altura" />
+                            <input type="text" id="nVlAltura" placeholder="Mínimo 2 cm" autofocus class="form-control form-group" name="nVlAltura" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Diâmetro</span>
                             </div>
-                            <input type="text" id="diametro" placeholder="Mínimo 5 cm" autofocus class="form-control form-group" name="diametro" />
+                            <input type="text" id="nVlDiametro" placeholder="Mínimo 5 cm" autofocus class="form-control form-group" name="nVlDiametro" />
                         </div>
                     </div>
 
@@ -83,7 +83,7 @@
                         <div class="input-group mb-5">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Entrega Mão Própria</span>
-                                <select id="entregamao" class="w-100">
+                                <select name="sCdMaoPropria" id="sCdMaoPropria" class="w-100">
                                     <option class="form-group" value="S">Sim</option>
                                     <option class="form-group" value="N">Não</option>
                                 </select>
@@ -91,10 +91,10 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Valor Declarado</span>
                             </div>
-                            <input type="text" id="valordeclarado" autofocus class="form-control form-group" name="valordeclarado" maxlength="9" />
+                            <input type="text" id="nVlValorDeclarado" autofocus class="form-control form-group" name="valordeclarado" maxlength="9" />
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Aviso Recebimento</span>
-                                <select id="avisorecebimento" class="w-100">
+                                <select name="sCdAvisoRecebimento" id="sCdAvisoRecebimento" class="w-100">
                                     <option class="form-group" value="s">Sim</option>
                                     <option class="form-group" value="n">Não</option>
                                 </select>
