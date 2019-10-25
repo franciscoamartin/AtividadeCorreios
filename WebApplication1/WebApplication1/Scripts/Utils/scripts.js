@@ -58,7 +58,7 @@
 
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
-$('#valordeclarado').mask('#.###,00', { reverse: true });
+$('#nVlValorDeclarado').mask('#.###,00', { reverse: true });
 
 $(document).ready(function () {
     $('#consultar').click(function () {
@@ -68,12 +68,13 @@ $(document).ready(function () {
         //Obtemos o atributo que indica a pagina que vamos enviar o post
         var obterAtributo = $('#formenviar').attr('send-post');
 
-        debugger
+
         //Enviamos o post para nosso servidor web
-        $.post("http://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
+        $.post("https://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
             //aqui como recebemos uma string com formato de JSON
             //temos que passar ela para o JSON parecido com o int.Parse()
             data = JSON.parse(data);
+            debugger
 
             //Aqui carregamos as informações automaticamente
             $.each(data.cServico, function (key, value) {
