@@ -56,7 +56,6 @@
 //});
 
 
-
 $('#ceporigem').mask("00000-000");
 $('#cepdestino').mask("00000-000");
 $('#valordeclarado').mask('#.###,00', { reverse: true });
@@ -70,22 +69,20 @@ $(document).ready(function () {
         var obterAtributo = $('#formenviar').attr('send-post');
 
         debugger
-
         //Enviamos o post para nosso servidor web
         $.post("http://usysweb.com.br/api/" + obterAtributo + ".php?giomar=true", informacoes, function (data) {
             //aqui como recebemos uma string com formato de JSON
             //temos que passar ela para o JSON parecido com o int.Parse()
             data = JSON.parse(data);
-            debugger
 
             //Aqui carregamos as informações automaticamente
             $.each(data.cServico, function (key, value) {
 
-                $('#resultadoValor').val("R$ " + value.cServico.Valor);
-                $('#resultadoPrazo').val(value.cServico.PrazoEntrega + " dia(s)");
-                $('#resultadoSemAdicionais').val("R$ " + value.cServico.ValorSemAdicionais);
+                //$('#resultadoValor').val("R$ " + value.cServico.Valor);
+                //$('#resultadoPrazo').val(value.cServico.PrazoEntrega + " dia(s)");
+                //$('#resultadoSemAdicionais').val("R$ " + value.cServico.ValorSemAdicionais);
 
-                $('input[name={key}]'.replace("{key}", key)).val(value);
+                $('input[name={key}]'.replace("{key}", key)).value(value);
             });
         });
     });
